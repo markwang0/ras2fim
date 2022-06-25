@@ -222,7 +222,9 @@ def fn_get_usgs_dem_from_shape(str_input_path,
     os.makedirs(STR_OUTPUT_PATH, exist_ok=True)
     
     # into the folder
-    STR_OUTPUT_PATH += '\\'
+    # STR_OUTPUT_PATH += '\\'
+    # update for Unix paths
+    STR_OUTPUT_PATH += '/'
     
     # read the "area of interest" shapefile in to geopandas dataframe
     gdf_aoi_prj = gpd.read_file(STR_AOI_SHP_PATH)
